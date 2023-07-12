@@ -41,6 +41,7 @@ int main ()
         file.close();
 
         main();
+        
     } else if (choice == 2){
         bool status = isLoggedIn();
 
