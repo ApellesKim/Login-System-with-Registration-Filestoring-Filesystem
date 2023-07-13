@@ -11,7 +11,7 @@ bool isLoggedIn()
     cout << "Enter your username: "; cin >> username;
     cout << "Enter your password: "; cin >> password;
 
-    ifstream read("data//" + username + ".txt");
+    ifstream read("data\\" + username + ".txt");
     getline(read, un);
     getline(read, pw);
 
@@ -45,7 +45,7 @@ int main ()
     } else if (choice == 2){
         bool status = isLoggedIn();
 
-        if (!status){
+        if(!status){
             cout << "False Login!" << endl;
             system("PAUSE");
             return 0;
@@ -55,6 +55,9 @@ int main ()
             return 1;
         };
         
+    } else {
+        cout << "Enter a valid number" << endl;
+        main();
     }
 
 };
